@@ -16,7 +16,7 @@
         <engine name="cordova-android" version=">=6.3.0"/>
     </engines>
   
-    <js-module src="www/flicplugin.js" name="flicPlugin">
+    <js-module src="www/FlicPlugin.js" name="flicPlugin">
         <clobbers target="window.plugins.flicPlugin" />
     </js-module>
 
