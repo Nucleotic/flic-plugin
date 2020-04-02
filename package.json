@@ -1,0 +1,33 @@
+{
+  "name": "cordova-plugin-flicplugin",
+  "version": "0.0.1",
+  "description": "A Cordova plugin providing access to the Flic SDK",
+  "cordova": {
+    "id": "cordova-plugin-flicplugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nucleotic/flic-plugin.git"
+  },
+  "keywords": [
+    "cordova",
+    "flic",
+    "smart",
+    "button",
+    "sdk",
+    "lib",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+
+  "author": "Dewald Troskie <dewaldt@thenomicsgroup.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nucleotic/flic-plugin/issues"
+  },
+  "homepage": "https://github.com/Nucleotic/flic-plugin"
+}

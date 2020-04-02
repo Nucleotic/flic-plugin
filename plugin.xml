@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-flic" version="0.0.1">
+    <name>FlicPlugin</name>
+
+    <description>A Cordova plugin providing access to the Flic SDK.</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,flic,message,alert</keywords>
+    <repo>https://github.com/Nucleotic/flic-plugin.git</repo>
+    <issue>https://github.com/Nucleotic/flic-plugin/issues</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=8.0.0"/>
+        <engine name="cordova-android" version=">=6.3.0"/>
+    </engines>
+  
+    <js-module src="www/flicplugin.js" name="flicPlugin">
+        <clobbers target="window.plugins.flicPlugin" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <!-- Add plugin dependencies -->
+        <framework src="src/android/cordovaFlic.gradle" custom="true" type="gradleReference"/>
+        <resource-file src="libs/fliclib-release.aar" target="libs/fliclib-release.aar"/>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FlicPlugin">
+                <param name="android-package" value="com.aasa.cordova.plugin.FlicPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/FlicPlugin.java" target-dir="com/aasa/cordova/plugin" />
+        <source-file src="src/android/PluginSettings.java" target-dir="com/aasa/cordova/plugin"/>
+    </platform>
+</plugin>
